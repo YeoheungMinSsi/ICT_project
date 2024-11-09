@@ -1,0 +1,43 @@
+.home-navbar {
+    width: 1920px;
+    height: 80px;
+    position: relative;
+    background-color: #bd7d7d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Nav 리스트*/
+.home-navbar > ul {
+    width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.home-navbar > ul > li {
+    font-size: 14px;
+    cursor: pointer;
+    width: 100px;
+    height: 80px;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-hover {
+    width: 100px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff0000;
+
+}

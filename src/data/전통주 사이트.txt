@@ -1,0 +1,14 @@
+http://www.lampcook.com/food_story/brewery_sub_story_view.php?idx_no=11-4
+
+
+https://timba922.com/entry/%ED%95%9C%EA%B5%AD%EC%9D%98-%EC%A0%84%ED%86%B5%EC%A3%BC-3-1%ED%83%84-%EA%B2%BD%EC%83%81%EB%8F%84%EC%9D%98-%EC%A0%84%ED%86%B5%EC%A3%BC
+
+https://timba922.com/m/entry/%ED%95%9C%EA%B5%AD%EC%9D%98-%EC%A0%84%ED%86%B5%EC%A3%BC-3-1%ED%83%84-%EA%B2%BD%EC%83%81%EB%8F%84%EC%9D%98-%EC%A0%84%ED%86%B5%EC%A3%BC
+
+https://www.garoseoul.com/liqueur/?idx=280
+
+https://terms.naver.com/list.naver?cid=58636&categoryId=58636
+
+https://thesool.com/front/find/M000000083/view.do?searchType=2&searchKey=&searchKind=&levelType=&searchString=&productId=PR00000
+PR있는 부분이 제품에 대해서 있는 부분
+해당 부분에서 이름이 있는 부분을 if로 넣어서 결과를 가지고 오는게 좋아보임

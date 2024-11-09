@@ -1,0 +1,45 @@
+
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 1920px;
+    height: 0;
+    background: #e8975c;
+    z-index: 10;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.submenu.open {
+    animation: openSubBoardMenu 0.25s ease-out forwards;
+}
+
+/*Nav sub 리스트들*/
+.sub-board-title {
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 40px 0 40px;
+}
+
+.sub-board-title p {
+    font-size: 13px;
+}
+
+.sub-board-list li{
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+
+
+/*sub메뉴 슬라이드 애니메이션*/
+@keyframes openSubBoardMenu {
+    from {height: 0;}
+    to {height: 250px;}
+}
+
