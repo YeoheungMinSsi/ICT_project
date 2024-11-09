@@ -3,30 +3,24 @@
     height: 100vh;
 }
 
-.notice {
-    width: 100%;
-    height: 40px;
-    background-color: #fba9a9;
+.home-icon {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 20px;
+    left: 320px;
+    cursor: pointer;
+    z-index: 1000;
 }
 
-.nav {
-    width: 100%;
-    height: 100px;
-    background: #afff9b;
+.home-icon:hover {
+    color: #007bff; /* 호버 시 색상 변경 */
 }
 
 .main {
     width: 100%;
     height: 847px;
-    background: #c0eeff;
-}
-
-.mainCarousel {
-    width: 1920px;
-    height: 500px;
-    background: #fbc6eb;
-    display: flex;
-    justify-content: center;
+    background: #f4cece;
 }
 
 .footer {

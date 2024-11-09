@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-import SubDrink from './SubMenu/SubDrink';
-import SubGlas from './SubMenu/SubGlass';
-import SubBoard from './SubMenu/SubBoard';
+import SubDrink from './SubMenu/SubDrinkList/SubDrink';
+import SubGlas from './SubMenu/SubGlassList/SubGlass';
+import SubBoard from './SubMenu/SubBoardList/SubBoard';
 import "../../css/allCss.css"
 
 export default function Nav() {
@@ -47,8 +47,6 @@ export default function Nav() {
                 return null;
         }
     }
-
-
 
     return (
         <nav className="home-navbar" ref={navRef}>

@@ -28,18 +28,25 @@
 
 .sub-board-title p {
     font-size: 13px;
+    font-weight: bold;
 }
-
-.sub-board-list li{
-    font-size: 12px;
-    margin: 5px 0;
-}
-
 
 
 /*sub메뉴 슬라이드 애니메이션*/
 @keyframes openSubBoardMenu {
     from {height: 0;}
-    to {height: 250px;}
+    to {height: 70px;}
 }
 
+/*구분선*/
+.board-divider-pre {
+    display: flex;
+    align-items: center;
+}
+
+.board-divider{
+    width: 2px;
+    height: 30px;
+    background-color: black;
+    margin: 0 20px;
+}

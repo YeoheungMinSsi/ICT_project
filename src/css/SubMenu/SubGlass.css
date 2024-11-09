@@ -1,4 +1,4 @@
-.submenu {
+.glass-submenu {
     position: absolute;
     top: 100%;
     left: 0;
@@ -12,7 +12,7 @@
     justify-content: center;
 }
 
-.submenu.open {
+.glass-submenu.open {
     animation: openSubGlassMenu 0.25s ease-out forwards;
 }
 
@@ -23,19 +23,41 @@
     flex-direction: column;
     margin: 20px 40px 0 40px;
 }
-
 .sub-glass-title p {
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px 0;
 }
-
 .sub-glass-list li{
     font-size: 12px;
     margin: 5px 0;
 }
 
+/*구분선*/
+.sub-glass-list-section {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+}
+.sub-glass-list-section>div{
+    width: 90px;
+}
+
+/*구분선*/
+.glass-divider-pre {
+    display: flex;
+    align-items: center;
+}
+
+.glass-divider{
+    width: 2px;
+    height: 160px;
+    background-color: black;
+    margin: 0 20px;
+}
 
 /*sub메뉴 슬라이드 애니메이션*/
 @keyframes openSubGlassMenu {
     from {height: 0;}
-    to {height: 200px;}
+    to {height: 230px;}
 }
