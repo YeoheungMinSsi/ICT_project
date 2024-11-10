@@ -3,16 +3,18 @@ import SubGlassTitle from './SubGlassTitle';
 import SubGlassList from './SubGlassList';
 import GlassDivider from './GlassDivider';
 import '../../../../css/allCss.css'
+import {useNavigate} from "react-router-dom";
 
 export default function SubGlass({hoveredId}) {
     const [menuState, setMenuState] = useState('');
+    const navigate = useNavigate();
 
     useEffect(() => {
         setMenuState(hoveredId ? 'open' : 'close');
     }, [hoveredId]);
 
     const glassCategories = [
-        { title: "다양한 잔 종류",
+        { title: "잔의 종류",
             items: [] },
         { title: "잔의 재질",
             items: ["유리", "도자기", "금속류", "목재", "아크릴"] },
@@ -24,11 +26,24 @@ export default function SubGlass({hoveredId}) {
         }
     ];
 
+    const handleTitleClick = (title)  => {
+        if (title === "잔의 종류") {
+            navigate('/glass'); // Drink 메인 페이지로 이동
+        } else {
+            navigate(`/glass/${encodeURIComponent(title.toLowerCase())}`);
+        }
+    }
+
+
+
     return (
         <div className={`glass-submenu ${menuState}`}>
             {glassCategories.map((category, index) => (
                 <React.Fragment key={index}>
-                    <SubGlassTitle title={category.title}>
+                    <SubGlassTitle
+                        title={category.title}
+                        onClick={() => handleTitleClick(category.title)}
+                    >
                         {category.title === "술잔" ? (
                             <section className="sub-glass-list-section">
                                 {category.items.map((subList, subIndex) => (

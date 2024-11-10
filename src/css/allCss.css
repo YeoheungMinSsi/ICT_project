@@ -6,9 +6,12 @@
 @import './carousels.css';
 @import './Nav.css';
 @import './test.css';
-@import './SubMenu/SubDrink.css';
-@import './SubMenu/SubGlass.css';
-@import './SubMenu/SubBoard.css';
+@import './SubMenu.css';
+
+.Layout {
+    width: 100%;
+    height: 100%;
+}
 
 ul,li,ol {
     margin:0;

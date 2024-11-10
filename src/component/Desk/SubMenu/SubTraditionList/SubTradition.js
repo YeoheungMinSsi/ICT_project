@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import {useNavigate} from 'react-router-dom';
 import '../../../../css/allCss.css'
 
-import SubDrinkTitle from './SubDrinkTitle';
-import SubDrinkList from './SubDrinkList';
-import DrinkDivider from './DrinkDivider';
+import SubTraditionTitle from './SubTraditionTitle';
+// import SubTraditionList from './SubTraditionList';
+import TraditionDivider from './TraditionDivider';
 
-export default function SubDrink({hoveredId}) {
+export default function SubTradition({hoveredId}) {
     const [menuState, setMenuState] = useState('');
     const navigate = useNavigate();
 
@@ -16,34 +16,30 @@ export default function SubDrink({hoveredId}) {
     }, [hoveredId]);
 
     const handleTitleClick = (title)  => {
-        if (title === "다양한 술 종류") {
-            navigate('/drink'); // Drink 메인 페이지로 이동
+        if (title === "전통주/지역주") {
+            navigate('/tradition'); // Drink 메인 페이지로 이동
         } else {
-            navigate(`/drink/${encodeURIComponent(title.toLowerCase())}`);
+            navigate(`/tradition/${encodeURIComponent(title.toLowerCase())}`);
         }
     }
 
     const drinkCategories = [
-        { title: "발효주", items: ["맥주", "와인", "청주", "탁주", "사케"] },
-        { title: "증류주", items: ["위스키", "블랜디", "럼", "테킬라", "보드카", "증류식 소주", "쇼츄"] },
-        { title: "혼성주", items: ["리큐르"] },
-        { title: "희석주", items: ["희석식 소주"] },
-        { title: "기타 주류", items: ["하이볼", "강화주", "칵테일", "하이볼"] }
+        { title: "경기도"}, { title: "경상도"}, { title: "전라도"},{ title: "충청도"},
+        { title: "강원도"}, { title: "제주도"}
     ];
 
     return (
-        <div className={`drink-submenu ${menuState}`}>
-            <SubDrinkTitle title="다양한 술 종류" onClick={() => handleTitleClick("다양한 술 종류")} />
-            <DrinkDivider />
+        <div className={`tradition-submenu ${menuState}`}>
+            <SubTraditionTitle title="전통주/지역주" onClick={() => handleTitleClick("전통주/지역주")} />
+            <TraditionDivider />
             {drinkCategories.map((category, index) => (
                 <React.Fragment key={index}>
-                    <SubDrinkTitle
+                    <SubTraditionTitle
                         title={category.title}
                         onClick={() => handleTitleClick(category.title)}
                     >
-                        <SubDrinkList items={category.items} />
-                    </SubDrinkTitle>
-                    {index < drinkCategories.length - 1 && <DrinkDivider />}
+                    </SubTraditionTitle>
+                    {index < drinkCategories.length - 1 && <TraditionDivider />}
                 </React.Fragment>
             ))}
         </div>

@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import SubDrink from './SubMenu/SubDrinkList/SubDrink';
-import SubGlas from './SubMenu/SubGlassList/SubGlass';
+import SubTradition from './SubMenu/SubTraditionList/SubTradition';
+import SubGlass from './SubMenu/SubGlassList/SubGlass';
 import SubBoard from './SubMenu/SubBoardList/SubBoard';
 import "../../css/allCss.css"
 
@@ -10,6 +11,7 @@ export default function Nav() {
 
     const pageLink = [
         { id: "Drink", alert: "Drink" },
+        { id: "Tradition", alert: "전통주" },
         { id: "Glass", alert: "Glass" },
         { id: "Board", alert: "Board" }
     ];
@@ -39,8 +41,10 @@ export default function Nav() {
         switch(hoveredItem) {
             case 'Drink':
                 return <SubDrink hoveredId={hoveredItem}/>;
+            case 'Tradition':
+                return <SubTradition hoveredId={hoveredItem}/>;
             case 'Glass':
-                return <SubGlas hoveredId={hoveredItem}/>;
+                return <SubGlass hoveredId={hoveredItem}/>;
             case 'Board':
                 return <SubBoard hoveredId={hoveredItem}/>;
             default:

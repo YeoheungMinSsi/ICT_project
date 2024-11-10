@@ -1,6 +1,6 @@
 .home-navbar {
-    width: 1920px;
-    height: 80px;
+    width: 100%;
+    height: 10%;
     position: relative;
     background-color: #bd7d7d;
     display: flex;
@@ -10,20 +10,21 @@
 
 /*Nav 리스트*/
 .home-navbar > ul {
-    width: 500px;
+    width: 30%;
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 0 10%;
 }
 
 .home-navbar > ul > li {
-    font-size: 14px;
+    font-size: 1.1rem;
     cursor: pointer;
     width: 100px;
+    margin: 0 5%;
 }
 
 .nav-item {

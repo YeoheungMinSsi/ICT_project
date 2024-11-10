@@ -15,7 +15,7 @@ export default function SubBoard({hoveredId}) {
 
     return (
         <>
-            <div className={`submenu ${menuState}`}> {/*술분류에대한 페이지*/}
+            <div className={`board-submenu ${menuState}`}> {/*술분류에대한 페이지*/}
                 <div className="sub-board-title">
                     <p>공지사항</p>
                 </div>
