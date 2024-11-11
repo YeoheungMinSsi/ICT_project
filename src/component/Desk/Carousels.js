@@ -5,17 +5,19 @@ import '../../css/allCss.css';
 
 export default function Carousels() {
     return (
-        <Carousel slide={true} className="home-carousel">
-            <Carousel.Item interval={2000}>
-                <CarouselImage text={1}/>
-            </Carousel.Item>
-            <Carousel.Item interval={2000}>
-                <CarouselImage text={2}/>
-            </Carousel.Item>
-            <Carousel.Item interval={2000}>
-                <CarouselImage text={3}/>
-            </Carousel.Item>
-        </Carousel>
+        <React.Fragment>
+            <Carousel slide={true} className="home-carousel">
+                <Carousel.Item interval={2000}>
+                    <CarouselImage text={1}/>
+                </Carousel.Item>
+                <Carousel.Item interval={2000}>
+                    <CarouselImage text={2}/>
+                </Carousel.Item>
+                <Carousel.Item interval={2000}>
+                    <CarouselImage text={3}/>
+                </Carousel.Item>
+            </Carousel>
+        </React.Fragment>
     );
 }
 

@@ -1,8 +1,8 @@
 .home-navbar {
     width: 100%;
-    height: 10%;
+    height: 14vh;
     position: relative;
-    background-color: #bd7d7d;
+    background-color: #4a4e59;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,6 +18,7 @@
     list-style-type: none;
     padding: 0;
     margin: 0 0 0 10%;
+    color: white;
 }
 
 .home-navbar > ul > li {
@@ -38,5 +39,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #e85656;
+    background-color: #7e7198;
 }
