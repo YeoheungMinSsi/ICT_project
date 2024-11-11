@@ -1,7 +1,3 @@
-.Home {
-    width: 100%;
-    height: 100vh;
-}
 
 .home-icon {
     width: 4.3vw;
@@ -15,17 +11,20 @@
 
 .main {
     width: 100%;
-    height: 90%;
-    background: #f4cece;
+    padding: 0;
+    border: 0;
+
 }
 
 .mainCarousel {
     width: 100%;
-    height: 60%;
+    height: 100%;
+    /*margin: 0;*/
+    /*padding: 0;*/
 }
 
 .footer {
     width: 100%;
     height: 7%;
-    background: #ff9ae2;
+    background: #ff0000;
 }

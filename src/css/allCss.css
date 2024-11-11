@@ -8,10 +8,25 @@
 @import './test.css';
 @import './SubMenu.css';
 
+* {
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*border: 0;*/
+    box-sizing: border-box;
+}
+
+html, body, #root, .App {
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+}
+
 .Layout {
     width: 100%;
-    height: 100%;
+    /* 헤더의 높이를 원하는 대로 설정 */
+    /*height: 100%; !* 예시 값 *!*/
 }
+
 
 ul,li,ol {
     margin:0;
