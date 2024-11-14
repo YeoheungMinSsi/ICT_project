@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Link, Route, Routes} from 'react-router-dom';
 // 이동할 페이지 목록
 import Home from './component/Desk/Home';
 import Drink from './component/Desk/Drink/Drink';
-import Tradition from './component/Desk/Tradition/Tradition';
+import Tradition from './component/Desk/Tradition/component/Tradition';
 import Glass from './component/Desk/Glass/Glass';
 
 function App() {

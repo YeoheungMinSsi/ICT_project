@@ -1,13 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import SubDrink from './SubMenu/SubDrinkList/SubDrink';
 import SubTradition from './SubMenu/SubTraditionList/SubTradition';
 import SubGlass from './SubMenu/SubGlassList/SubGlass';
 import SubBoard from './SubMenu/SubBoardList/SubBoard';
 import "../../css/allCss.css"
 
+import Icon from "./Icon";
+
 export default function Nav() {
     const [hoveredItem, setHoveredItem] = useState(null);
     const navRef = useRef(null);
+    const navigate = useNavigate();
 
     const pageLink = [
         { id: "Drink", alert: "Drink" },
@@ -18,7 +22,10 @@ export default function Nav() {
 
     function handleHoverOver(id) {
         setHoveredItem(id);
-    }
+    };
+    const handleHomeClick = () => {
+        navigate('/');
+    };
 
     // nav에 마우스를 가까이하거나 멀어질때 submenu가 뜨게하는 useEffect
     useEffect(() => {
@@ -52,20 +59,25 @@ export default function Nav() {
         }
     }
 
+
     return (
-        <nav className="home-navbar" ref={navRef}>
-            <ul className="main-menu">
-                {pageLink.map((item) => (
-                    <li
-                        key={item.id}
-                        className={hoveredItem === item.id ? "nav-item nav-hover" : "nav-item"}
-                        onMouseEnter={() => handleHoverOver(item.id)}
-                    >
-                        {item.alert}
-                    </li>
-                ))}
-            </ul>
-            {hoveredItem && renderSubMenu()}
-        </nav>
+        <>
+            <nav className="home-navbar" ref={navRef}>
+                <Icon handleHomeClick={handleHomeClick}/>
+                <ul className="main-menu">
+                    {pageLink.map((item) => (
+                        <li
+                            key={item.id}
+                            className={hoveredItem === item.id ? "nav-item nav-hover" : "nav-item"}
+                            onMouseEnter={() => handleHoverOver(item.id)}
+                        >
+                            {item.alert}
+                        </li>
+                    ))}
+                </ul>
+                {hoveredItem && renderSubMenu()}
+            </nav>
+        </>
+
     );
 }
