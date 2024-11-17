@@ -1,0 +1,33 @@
+body {
+
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    -ms-overflow-style: none;
+
+}
+
+
+
+#container {
+
+    width: 100%;
+    height: 900px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    scroll-snap-type: y mandatory; /* 스크롤 시 스냅처럼 화면이 변경 */
+}
+
+#container::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, Edge용 */
+}
+
+.item {
+    scroll-snap-align: center;
+    display: inline-block;
+    width: 100%;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

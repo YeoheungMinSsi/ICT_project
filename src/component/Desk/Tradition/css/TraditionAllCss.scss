@@ -1,0 +1,253 @@
+/*@import 'bootstrap/dist/css/bootstrap.min.css';*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style:none;
+}
+
+
+
+//화면에 대한 정의 함수 wrapper-style
+@mixin wrapper-style {
+  width: 100%;
+  height: 100vh;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+//nav를 제외한 페이지에 대해서 정의한 함수 page-style
+@mixin page-style {
+  width: 100%;
+  height: 100%;
+  background: #fadede;
+  display: flex;
+  justify-content: center;
+}
+
+//중앙에 들어가는 section에 대해서 정의한 함수 page-main-style
+@mixin page-main-style {
+  width: 65%;
+  height: 100%;
+  background: #ea9696;
+  display: flex;
+  flex-direction: column;
+}
+
+//nva바에 대한 설명
+.home-navbar {height: 10vh;}
+.home-icon {
+  width: 4.3vw;
+  height: 7vh;
+  cursor: pointer;
+  z-index: 100;
+}
+
+//---------------------화면 전체---------------------
+:is(.Tradition-wrapper,.all-tradi-drinks-wrapper) {@include wrapper-style;}
+//---------------nva를 제외한 메인 페이지---------------
+:is(.Tradition-page, .all-tradi-drink-page) {@include page-style;}
+
+
+/*-------------------중앙 내용 페이지-------------------*/
+:is(.Tradition-main, .all-tradi-drinks-main) {
+  @include page-main-style
+}
+
+
+.Tradition-main-title-bar{
+  width: 100%;
+  height: 7vh;
+}
+
+/*-----------전통주 지역주 선택 버튼--------*/
+.btn-group {
+  width: 100%;
+  height: 5vh;
+  display: inline-flex; /* 인라인 플렉스 컨테이너로 설정 */
+  justify-content: center;
+  margin: 2vh 0;
+}
+.btn-tradition, .btn-region {
+  color: black;
+  width: 15%;
+  height: 100%;
+  border: 2px solid #ccc; /* 얇은 테두리 추가 */
+  background-color: white; /* 배경색 지정 */
+  outline: none; /* 기본 아웃라인 제거 */
+}
+
+.btn-tradition {
+  border-radius: 0.8vw 0 0 0.8vw;
+  border-right: 1px solid #ccc; /* 오른쪽 테두리 제거 */
+}
+
+.btn-region {
+  border-radius: 0 0.8vw 0.8vw 0;
+  border-left: 1px solid #ccc; /* 왼쪽 테두리 제거 */
+}
+
+
+.btn-tradition:hover, .btn-region:hover {background-color: #e0e0e0;}
+
+.btn-tradition.active, .btn-region.active {background-color: #c0c0c0;}
+
+
+/*-----------전통주 소개 부분 화면-------------*/
+.Tradition-main-title {
+  width: 100%;
+  height: 70vh;
+}
+.Tradition-main-title-text {
+  width: 100%;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tradition-three-container {
+  width: 100%;
+  height: 60vh;
+  text-align: center;
+}
+.drink-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2vh;
+}
+
+.drink-item {width: 30%;}
+
+.drink-item img {
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 1vh;
+}
+
+.drink-item img:hover {transform: scale(1.05);}
+
+.drink-item img.selected {border: 4px solid #b7d9ff;}
+
+.drink-description {
+  text-align: left;
+  padding: 0 5vw;
+}
+
+
+
+/*------------대한민국 지도------------*/
+.Tradition-main-map{
+  height: 50vh;
+  display: flex;
+}
+
+.korea-map-container {
+  width: 50%;
+  height: 100%;
+}
+.korea-map-svg {
+  width: 100%;
+  height: 100%;
+  margin-left: 5%;
+  fill: lightgray;
+  stroke: white;
+}
+.korea-map-svg g {transition: transform 0.3s ease;}
+
+.korea-map-svg g:hover:not(.inactive) {transform: scale(1.03);}
+
+.korea-map-svg g:hover,
+.korea-map-svg g.selected {z-index: 10;}
+
+.korea-map-svg g.selected {transform: scale(1.03);}
+
+.korea-map-svg g.inactive {opacity: 0.5;}
+
+
+.korea-map-svg g.selected path {fill: #ff0000; /* 선택된 지역의 색상 */}
+
+:is(.gyeongsang, .jeolla, .chungcheong
+.gyeonggi, .jejudo, .gangwondo):hover {
+  outline: none;
+  stroke: white;
+}
+
+.gyeongsang:hover {fill: blue;}
+.jeolla:hover {fill: orange;}
+.chungcheong:hover {fill: green;}
+.gyeonggi:hover {fill: orangered;}
+.jeju:hover {fill: yellow;}
+.gangwon:hover {fill: saddlebrown;}
+
+.tooltip {
+  position: fixed;
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+  pointer-events: none;
+  z-index: 2000;
+  display: block; /* 추가 */
+}
+
+
+.Tradition-r-side {
+  width: 17.5%;
+  height: 100%;
+}
+.Tradition-r-side-bar {
+  width: 15%;
+  height: 30vh;
+  background: #fd9fe0;
+}
+
+
+//.Tradition-l-side-bar {
+//  width: 80%;
+//  height: 30vh;
+//  left: 20%;
+//  background-color: #f4f4f4; /* 배경색 */
+//  border-radius: 7%;
+//  /*position: fixed;*/
+//  top: 40%;
+//  display: flex;
+//  flex-direction: column;
+//  justify-content: center;
+//  align-items: center;
+//  overflow-y: auto; /* 세로 스크롤 가능 */
+//}
+/*.Tradition-l-side-bar .fixed {*/
+/*    position: fixed;*/
+/*    top: 10%;*/
+/*    width: 12%;*/
+/*    height: 30vh;*/
+/*    left: 0;*/
+/*    background-color: #f4f4f4; !* 배경색 *!*/
+/*    border-radius: 7%;*/
+/*    !*position: fixed;*!*/
+/*    top: 20%;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    overflow-y: auto; !* 세로 스크롤 가능 *!*/
+/*}*/
+
+.Tradition-l-side {
+  width: 17.5%;
+  height: 100%;
+}
+
+
+//.Tradition-l-rside-bar>hr {
+//  /*height: 2vh;*/
+//  /*color: black;*/
+//  /*background-color: black;*/
+//}

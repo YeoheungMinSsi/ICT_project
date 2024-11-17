@@ -1,0 +1,62 @@
+.item {
+
+    font-size: 70px;
+    font-family: "Orbit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.text {
+
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+h2{
+
+    display: flex;
+    justify-content: space-around;
+    font-size: 90px;
+}
+
+#member {
+
+    width: 1100px;
+    font-size: 35px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.name {
+
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 45px;
+    line-height: 40px;
+    margin: 0px 0px 20px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+#minji, #jihong, #juchan {
+
+    width: 330px;
+    height: 330px;
+    background-size: cover;
+    border-radius: 30%;
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
+
+#minji:hover, #jihong:hover, #juchan:hover {
+
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+    transition: 1s;
+}
