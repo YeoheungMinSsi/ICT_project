@@ -37,6 +37,9 @@
     display: flex;
     flex-direction: column;
 }
+.sub-tradition-title {
+    cursor: pointer;
+}
 
 .sub-drink-title p,
 .sub-tradition-title p,
@@ -46,6 +49,7 @@
     font-weight: bold;
     margin: 5px 0;
 }
+
 
 /*-----Nav sub 리스트틀---------*/
 .sub-drink-list li,
@@ -91,6 +95,12 @@
     height: 65%;
     background-color: rgba(0, 0, 0, 0.6);
     margin: 0 1.5vw 0 0;
+}
+
+/*----------*/
+.sub-item {
+    padding-left: 20px;
+    font-size: 0.9em;
 }
 
 

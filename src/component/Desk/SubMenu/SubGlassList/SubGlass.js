@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SubGlassTitle from './SubGlassTitle';
 import SubGlassList from './SubGlassList';
-import GlassDivider from './GlassDivider';
 import '../../../../css/allCss.css'
 import {useNavigate} from "react-router-dom";
 
@@ -34,8 +33,6 @@ export default function SubGlass({hoveredId}) {
         }
     }
 
-
-
     return (
         <div className={`glass-submenu ${menuState}`}>
             {glassCategories.map((category, index) => (
@@ -56,7 +53,6 @@ export default function SubGlass({hoveredId}) {
                             category.items.length > 0 && <SubGlassList items={category.items} />
                         )}
                     </SubGlassTitle>
-                    {index < glassCategories.length - 1 && <GlassDivider />}
                 </React.Fragment>
             ))}
         </div>

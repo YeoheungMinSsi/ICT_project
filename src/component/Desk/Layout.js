@@ -6,11 +6,6 @@ import '../../css/allCss.css'
 import Nav from "./Nav";
 
 export default function Layout() {
-    // const navigate = useNavigate();
-    //
-    // const handleHomeClick = () => {
-    //     navigate('/');
-    // };
 
     return (
         <React.Fragment>

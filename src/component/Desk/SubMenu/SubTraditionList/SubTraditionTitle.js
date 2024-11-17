@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../../css/allCss.css'
+import './SubTraditionCss.css'
 
 const SubTraditionTitle = ({ title, children, onClick}) => (
     <div className="sub-tradition-title" onClick={onClick}>
