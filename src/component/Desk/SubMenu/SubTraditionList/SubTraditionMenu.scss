@@ -1,0 +1,75 @@
+// 전역 스타일 리셋
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+// 전통 서브메뉴 기본 스타일
+.tradition-submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 0; // 초기 높이는 0
+  z-index: 10;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  // 서브메뉴가 열릴 때의 애니메이션
+  &.open {
+    animation: openSubTraditionMenu 0.25s ease-out forwards;
+  }
+}
+
+// 전통 서브메뉴 내부 타이틀 스타일
+.sub-tradition-title {
+  width: 15vw;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+  margin: 2em 0;
+
+  p {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+}
+
+// 전통 서브메뉴 리스트 스타일
+
+.sub-tradition-list-container {
+  width: 100%;
+}
+
+.sub-tradition-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    width: 50%; // Set width to 50% for two columns
+    cursor: pointer;
+    text-align: left;
+  }
+}
+
+// 서브 아이템 스타일
+.sub-item {
+  padding-left: 20px;
+  font-size: 0.9em;
+}
+
+// 서브메뉴 슬라이드 애니메이션 정의
+@keyframes openSubTraditionMenu {
+  from { height: 0; }
+  to { height: 20vh; }
+}

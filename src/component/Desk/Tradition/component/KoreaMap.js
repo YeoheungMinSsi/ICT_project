@@ -36,7 +36,8 @@ export default function KoreaMap({ onRegionHover, onRegionClick, selectedRegion 
                                 id={area.id}
                                 className={area.className}
                                 d={area.d}
-                            />
+                            >
+                            </path>
                         ))}
                     </g>
                 ))}

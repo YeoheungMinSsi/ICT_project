@@ -1,17 +1,16 @@
 import React from 'react';
-import './SubTraditionCss.css'
+import './SubTraditionMenu.scss'
 
 const SubTraditionList = ({ items, onItemClick }) => (
-    <ul className="sub-tradition-list">
-        {items.map((item, index) => (
-            <li key={index} onClick={(e) => {
-                e.stopPropagation(); // 이벤트 버블링 방지
-                onItemClick(item);
-            }}>
-                {item.title}
-            </li>
-        ))}
-    </ul>
+    <div className="sub-tradition-list-container">
+        <ul className="sub-tradition-list">
+            {items.map((item, index) => (
+                <li key={index} onClick={(event) => onItemClick(item, event)}>{item.title}</li>
+
+
+            ))}
+        </ul>
+    </div>
 );
 
 export default SubTraditionList;
