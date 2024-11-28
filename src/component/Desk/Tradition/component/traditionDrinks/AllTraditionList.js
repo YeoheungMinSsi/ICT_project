@@ -18,7 +18,7 @@ export default function AllTraditionList2() {
                     <h5>주 원료</h5>
                 </div>
                 <div className='all-tradi-list-item-tag'>
-                    <h3>태그 위치</h3>
+                    {/*<h3>태그 위치</h3>*/}
                 </div>
             </div>
         </>

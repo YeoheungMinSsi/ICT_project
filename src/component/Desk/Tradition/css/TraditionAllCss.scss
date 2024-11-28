@@ -20,7 +20,7 @@
 //nav를 제외한 페이지에 대해서 정의한 함수 page-style
 @mixin page-style {
   width: 100%;
-  height: 100%;
+  //height: 100%;
   background: #fadede;
   display: flex;
   justify-content: center;
@@ -37,7 +37,7 @@
 @mixin all-tradi-list-main-title-style {
   width: 5em;
   height: 4em;
-  background-color: #dd6b6b;
+  //background-color: #dd6b6b;
   display: flex;
   justify-content: center;
   align-items: center ;
@@ -128,7 +128,6 @@
 
 .all-tradi-list-main{
   width: 100%;
-  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
